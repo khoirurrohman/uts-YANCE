@@ -1,8 +1,8 @@
-import beranda from "./beranda"
-import live from "./live"
-import notifikasi from "./notifikasi"
-import saya from "./saya"
-import setting from "./setting"
+import beranda from "./Beranda"
+import live from "./Live"
+import notifikasi from "./Notifikasi"
+import saya from "./Saya"
+import setting from "./Setting"
 
 export {
     beranda,

@@ -3,6 +3,7 @@ import { beranda, live, notifikasi, saya, setting } from './screens';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+import { createStackNavigator } from '@react-navigation/stack';
 
 
 
@@ -26,6 +27,7 @@ export default function App() {
     <NavigationContainer>
       <Tab.Navigator screenOptions={screenOptions}>
         <Tab.Screen
+        
          name="beranda" 
          component={beranda}
          options={{
@@ -33,7 +35,7 @@ export default function App() {
             return (
               <View style={{alignItems: "center", justifyContent: "center"}}>
               <FontAwesome5 name="home" size={24} color={focused ? "#16247d": "#111"}/>
-              <Text style={{fontSize: 12, color: "16247d"}}>beranda</Text>
+              <Text style={{fontSize: 12, color: "16247d"}}>BERANDA</Text>
 
 
             </View>
@@ -41,12 +43,13 @@ export default function App() {
           }
          }}
          />
-        <Tab.Screen name="SIARAN" component={live}options={{
+        <Tab.Screen name="SIARAN"
+         component={live}options={{
           tabBarIcon: ({focused})=>{
             return (
               <View style={{alignItems: "center", justifyContent: "center"}}>
               <FontAwesome5 name="tv" size={24} color={focused ? "#16247d": "#111"}/>
-              <Text style={{fontSize: 12, color: "16247d"}}>siaran</Text>
+              <Text style={{fontSize: 12, color: "16247d"}}>SIARAN</Text>
 
 
             </View>
@@ -57,8 +60,8 @@ export default function App() {
           tabBarIcon: ({focused})=>{
             return (
               <View style={{alignItems: "center", justifyContent: "center"}}>
-              <FontAwesome5 name="home" size={24} color={focused ? "#16247d": "#111"}/>
-              <Text style={{fontSize: 12, color: "16247d"}}>beranda</Text>
+              <FontAwesome5 name="bell" size={24} color={focused ? "#16247d": "#111"}/>
+              <Text style={{fontSize: 12, color: "16247d"}}>NOTIFIKASI</Text>
 
 
             </View>
@@ -69,8 +72,8 @@ export default function App() {
           tabBarIcon: ({focused})=>{
             return (
               <View style={{alignItems: "center", justifyContent: "center"}}>
-              <FontAwesome5 name="home" size={24} color={focused ? "#16247d": "#111"}/>
-              <Text style={{fontSize: 12, color: "16247d"}}>beranda</Text>
+              <FontAwesome5 name="users" size={24} color={focused ? "#16247d": "#111"}/>
+              <Text style={{fontSize: 12, color: "16247d"}}>SAYA</Text>
 
 
             </View>
@@ -81,8 +84,8 @@ export default function App() {
           tabBarIcon: ({focused})=>{
             return (
               <View style={{alignItems: "center", justifyContent: "center"}}>
-              <FontAwesome5 name="home" size={24} color={focused ? "#16247d": "#111"}/>
-              <Text style={{fontSize: 12, color: "16247d"}}>beranda</Text>
+              <FontAwesome5 name="snowflake" size={24} color={focused ? "#16247d": "#111"}/>
+              <Text style={{fontSize: 12, color: "16247d"}}>PENGATURAN</Text>
 
 
             </View>
